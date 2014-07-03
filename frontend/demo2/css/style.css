@@ -1,14 +1,28 @@
 html,body{
-  margin:0; 
+  margin:0px; 
   height:100%;
+  padding:0px;
 }
 
-#header, #footer {
+body {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+#header, #footer, #left, #main, #right {
+}
+
+#header, #footer, #main {
   overflow: hidden;
 }
 
-#left, #main, #right {
+#left, #main-inner, #right {
   overflow: auto;
+}
+
+#main-inner {
+  border-style: solid;
+  border-color: #000;
 }
 
 #header {
@@ -21,10 +35,12 @@ html,body{
 
 #main {
   background-color: orange;
+  z-index: 0;
 }
 
 #right {
   background-color: gray;
+  z-index: 1;
 }
 
 #footer {
