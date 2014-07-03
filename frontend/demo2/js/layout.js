@@ -1,10 +1,11 @@
 jQuery(document).ready(function($) {
 
   /* configuration */
+
   layout_body_minwidth = 1024;
   layout_left_width = 200;
   layout_header_height = 63;
-  layou_footer_height = 63;
+  layou_footer_height = 61;
   layout_main_inner_minwidth = 800;
   layout_main_inner_border_width = 1;
   layout_main_inner_margin = 10;
@@ -60,7 +61,7 @@ function rebuildLayout() {
   $('#left')
     .css('position', 'absolute')
     .css('width', layout_left_width+'px')
-    .css('height', (window_height-layout_header_height)+'px')
+    .css('height', (window_height-layout_header_height-layou_footer_height)+'px')
     .css('top', layout_header_height+'px')
     .css('left', '0');
   $('#right')
@@ -80,10 +81,10 @@ function rebuildLayout() {
     .css('height', (window_height-layout_header_height-layou_footer_height-layout_main_inner_outside*2)+'px');
   $('#footer')
     .css('position', 'absolute')
-    .css('width', (container_width-layout_left_width)+'px')
+    .css('width', container_width+'px')
     .css('height', layou_footer_height+'px')
     .css('top', (window_height-layou_footer_height)+'px')
-    .css('left', layout_left_width+'px');
+    .css('left', '0');
 }
 
 function toggleSidebar(target_width) {
