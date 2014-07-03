@@ -1,0 +1,32 @@
+html,body{
+  margin:0; 
+  height:100%;
+}
+
+#header, #footer {
+  overflow: hidden;
+}
+
+#left, #main, #right {
+  overflow: auto;
+}
+
+#header {
+  background-color: red;
+}
+
+#left {
+  background-color: green;
+}
+
+#main {
+  background-color: orange;
+}
+
+#right {
+  background-color: gray;
+}
+
+#footer {
+  background-color: purple;
+}
